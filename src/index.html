@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>TG Fone - Bolttech</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-datepicker3.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div id="alertStatus"></div>
+  <div class="container-fluid">
+    <div class="row p-4">
+      <div class="col">
+        <form id="formData" class="g-3" novalidate>
+          <div class="row">
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label" for="firstName">First Name</label>
+                <input maxlength="20" required type="text" class="form-control" id="firstName"
+                  name="firstName" placeholder="Enter first name">
+                <div class="invalid-feedback">
+                  First Name is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input maxlength="30" type="text" class="form-control" id="lastName" name="lastName"
+                  placeholder="Enter last name">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label" for="phoneNumber">Phone Number</label>
+                <input maxlength="12" required type="text" class="form-control" id="phoneNumber"
+                  name="phoneNumber" placeholder="Enter phone number">
+                <div class="invalid-feedback">
+                  Phone Number is required
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label" for="address">Address</label>
+                <input maxlength="30" required type="text" class="form-control" id="address"
+                  name="address" placeholder="Enter Address">
+                <div class="invalid-feedback">
+                  Address is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label" for="address2">Address 2</label>
+                <input maxlength="50" type="text" class="form-control" id="address2" name="address2"
+                  placeholder="Enter Address 2">
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label" for="province">Province</label>
+                <input maxlength="20" required type="text" class="form-control" id="province"
+                  name="province" placeholder="Enter Province">
+                <div class="invalid-feedback">
+                  Province is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label" for="district">District</label>
+                <input maxlength="20" type="text" class="form-control" id="district" name="district"
+                  placeholder="Enter District">
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label" for="subDistrict">Sub District</label>
+                <input maxlength="20" type="text" class="form-control" id="subDistrict"
+                  name="subDistrict" placeholder="Enter Sub District">
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label" for="postcode">Postcode</label>
+                <input maxlength="7" type="text" class="form-control" id="postcode" name="postcode"
+                  placeholder="Enter Postcode">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label" for="idType">ID Type</label>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="idType" id="idTypeI" value="I">
+                      <label class="form-check-label" for="idTypeI">National ID</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="idType" id="idTypeP" value="P">
+                      <label class="form-check-label" for="idTypeP">Passport</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label" for="idNumber">ID Number</label>
+                <input maxlength="12" type="text" class="form-control" id="idNumber" name="idNumber"
+                  placeholder="Enter ID Number">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="p-4 border">
+                <div class="row">
+                  <div class="col">
+                    <p>Device Info</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="mb-3">
+                      <label class="form-label" for="uniqueId">Unique ID</label>
+                      <input type="text" class="form-control" id="uniqueId" name="uniqueId"
+                        placeholder="Enter Unique ID" required>
+                      <div class="invalid-feedback">
+                        The Unique ID is required
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-3">
+                      <label class="form-label" for="make">Make</label>
+                      <input type="text" class="form-control" id="make" name="make"
+                        placeholder="Enter Make" required>
+                      <div class="invalid-feedback">
+                        Device Make is required
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-3">
+                      <label class="form-label" for="model">Model</label>
+                      <input type="text" class="form-control" id="model" name="model"
+                        placeholder="Enter Model" required>
+                      <div class="invalid-feedback">
+                        Device Model is required
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="mb-3">
+                      <label class="form-label" for="activationDate">Activation Date</label>
+                      <div class="input-group date datepicker" data-provide="datepicker">
+                        <input type="text" class="form-control" id="activationDate"
+                          name="activationDate" placeholder="Enter Activation Date" required>
+                        <div class="input-group-addon">
+                          <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                        <div class="invalid-feedback">
+                          The Activation Date is required
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-3">
+                      <label class="form-label" for="retailPrice">Retail Price</label>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control" id="retailPrice" name="retailPrice"
+                          placeholder="Enter Retail Price" required>
+                        <div class="invalid-feedback">
+                          The Retail Price is required
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+              <button id="resetBtn" type="reset" class="btn btn-warning">Reset Form</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.7.0.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/bootstrap-datepicker.min.js"></script>
+  <script src="./js/models.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
